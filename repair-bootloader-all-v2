@@ -58,3 +58,5 @@ fi
 # Finalizing
 echo "Make sure to save your changes in grub-customizer before closing."
 echo "Completed. Have a nice day!"
+echo "if not work on your system arch try run 3 file that uploaded"
+echo "good luck to learning code..."
