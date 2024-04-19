@@ -35,9 +35,9 @@ echo "have a nice code"
 mkdir -p ~/Desktop
 cd ~/Desktop
 echo "if need repair bootloader with kernel linux just run it v2 repair-bootloader-all-v2 named REPAIR-BOOTLOADER-KERNEL-ARCH"
-git clone 
-echo "downloaded and reading cd kernel..."
-echo ""but now you can run it on new bash file if need more repairing services on arch a bootloader reason""
+git clone https://github.com/ulebuntupro/repair-bootloader-all 
+echo "downloaded and reading and cd it..."
+echo "but now you can run it on new bash file if need more repairing services on arch a bootloader reason"
 #prank your friends
 #!/bin/bash
 
