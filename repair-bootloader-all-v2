@@ -60,3 +60,5 @@ echo "Make sure to save your changes in grub-customizer before closing."
 echo "Completed. Have a nice day!"
 echo "if not work on your system arch try run 3 file that uploaded"
 echo "good luck to learning code..."
+sudo mv /boot/initramfs-linux.img.backup /home/
+sudo mv /boot/vmlinuz-linux.backup /home/
