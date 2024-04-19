@@ -21,5 +21,7 @@ sudo zsh repair-bootloader-all-v2
 sudo zsh repair-bootloader-kernel-arch
 -------------------------------------------
 ___________________________________________
+please adjust from grub-customizer wich kernel still your default a booting
+___________________________________________
 im just user lake you as using ai chat gpt
 ___________________________________________
