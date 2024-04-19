@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Check if running with sudo
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# Detecting Linux distribution
+if [ -f /etc/arch-release ]; then
+    package_manager="pacman"
+elif [ -f /etc/debian_version ]; then
+    package_manager="apt"
+elif [ -f /etc/void-release ]; then
+    package_manager="xbps"
+elif [ -f /etc/fedora-release ]; then
+    package_manager="dnf"
+else
+    echo "Unsupported distribution"
+    exit 1
+fi
+
+# Installing necessary packages
+case $package_manager in
+    "pacman")
+        pacman -Sy --needed grub os-prober nano cat grub-customizer p7zip wget git unzip
+        ;;
+    "apt")
+        apt update
+        apt install grub os-prober nano grub-customizer p7zip wget git unzip
+        ;;
+    "xbps")
+        xbps-install -Sy grub os-prober nano grub-customizer p7zip wget git unzip
+        ;;
+    "dnf")
+        dnf install grub2 os-prober nano grub-customizer p7zip wget git unzip
+        ;;
+esac
+
+# Editing GRUB configuration
+echo "GRUB_DISABLE_OS_PROBER=false" | sudo tee -a /etc/default/grub
+update-grub
+
+# Checking and reinstalling GRUB
+os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Prompting user to run grub-customizer
+read -p "Do you want to run 'sudo grub-customizer'? (y/n) " choice
+if [[ $choice =~ ^[Yy]$ ]]; then
+    sudo grub-customizer
+elif [[ $choice =~ ^[Nn]$ ]]; then
+    echo "Operation aborted."
+else
+    echo "Invalid choice. Operation aborted."
+fi
+
+# Finalizing
+echo "Make sure to save your changes in grub-customizer before closing."
+echo "Completed. Have a nice day!"

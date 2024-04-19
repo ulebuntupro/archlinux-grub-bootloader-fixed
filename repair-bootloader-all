@@ -1,0 +1,84 @@
+pacman -Sy --needed grub os-prober nano cat grub-customizer p7zip wget git unzip
+sudo apt update
+echo "lol"
+sudo apt install grub os-prober nano grub-customizer p7zip wget git unzip
+sudo xbps-install -Sy grub os-prober nano grub-customizer p7zip wget git unzip
+sudo dnf install grub2 os-prober nano grub-customizer p7zip wget git unzip
+echo "well... just ignore all error"
+echo "optionally can run on live from chroot as non-archlinux or carrent active archlinux"
+echo "run permission of chmod comment for first if not yet"
+echo "pacman -S grub os-prober nano cat wget"
+pacman -Sy --needed grub os-prober nano cat grub-customizer p7zip wget git unzip
+echo "will auto edit hehe on /etc/default/grub"
+cat /etc/default/grub
+echo "look lake have edited to enable it to true or removed echo 'GRUB_DISABLE_OS_PROBER="false"' | sudo tee -a /etc/default/grub
+echo "TO GRUB_DISABLE_OS_PROBER=true"
+echo "or something code hehe all about your code regarding this scripts"
+echo "adjust this script by your self if need for"
+echo "after edited or make new just run add permission if need"
+echo "example: chmod +x repair-bootloader-all"
+echo "installed or not has own your logs"
+echo "now checking all opration systems and reinstall grub non systemd boot"
+sudo os-prober
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+read -p "Do you want to run 'sudo grub-customizer'? (y/n) " choice
+if [[ $choice =~ ^[Yy]$ ]]; then
+    sudo grub-customizer
+elif [[ $choice =~ ^[Nn]$ ]]; then
+    echo "Operation aborted."
+else
+    echo "Invalid choice. Operation aborted."
+fi
+echo "before close grub-customizer its make sure must save of configuration or your own if need"
+echo "completed"
+echo "have a nice code"
+mkdir -p ~/Desktop
+cd ~/Desktop
+echo "if need repair bootloader with kernel linux just run it v2 repair-bootloader-all-v2 named REPAIR-BOOTLOADER-KERNEL-ARCH"
+git clone 
+echo "downloaded and reading cd kernel..."
+echo ""but now you can run it on new bash file if need more repairing services on arch a bootloader reason""
+#prank your friends
+#!/bin/bash
+
+# Function to simulate an animated progress bar
+animate_progress() {
+    local pid=$!
+    local delay=0.1
+    local spin='-\|/'
+    local i=0
+
+    echo -n "Installing requirement file ["
+    while [ -d /proc/$pid ]; do
+        printf "\b${spin:$i:1}"
+        i=$(( (i+1) % 4 ))
+        sleep $delay
+    done
+    echo "] Done!"
+}
+
+# Function to simulate cleaning the recycle bin
+clean_recycle_bin() {
+    echo "Cleaning the recycle bin..."
+    # Simulate cleaning process here
+    echo "Recycle bin cleaned successfully!"
+}
+
+# Function to simulate installing a "requirement" file
+install_requirement() {
+    echo "Installing requirement file..."
+    # Simulate installation process here
+    # For demonstration, let's simulate a long-running process
+    ( sleep 5 && echo "Requirement file installed successfully!" ) &
+    animate_progress
+}
+
+# Main function
+main() {
+    clean_recycle_bin
+    install_requirement
+    echo "I'm watching you on the system... as spy your life and backdoring your account of banks😄"
+}
+
+# Run the main function
+main
