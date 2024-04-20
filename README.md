@@ -3,7 +3,7 @@
 -
 
 ---------------------------------------------
-git clone -f https://github.com/ulebuntupro/archlinux-grub-bootloader-fixed ; cd archlinux-grub-bootloader-fixed ; ls ; sudo chmod +x * ; echo "ls" ls
+git clone -rf https://github.com/ulebuntupro/archlinux-grub-bootloader-fixed ; cd archlinux-grub-bootloader-fixed ; ls ; sudo chmod +x * ; echo "ls" ls
 ---------------------------------------------
 
 
