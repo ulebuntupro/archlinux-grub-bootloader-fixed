@@ -34,7 +34,7 @@ sudo ./repair-bootloader-all-v2
 sudo ./repair-bootloader-kernel-arch
 
 
-or use another style lake zsh non bash
+or use another style lake zsh or bash
 
 sudo bash repair-bootloader-all
 
