@@ -62,9 +62,15 @@ sudo zsh repair-bootloader-all-v2
 
 sudo zsh repair-bootloader-kernel-arch
 
+
+
+
 AFTER ALL HAVE RUN, MAY SOME DEVICE NEED ADJUST FROM BIOS LAKE:
 
+!THIS IS ONLY MY DIRECTORY AFTER RUN SCRIPT AND DIR FROM MY BIOS
+
 /boot/EFI/EFI/grub/grubx64.efi
+
 ___________________________________________
 please adjust from grub-customizer wich kernel still your default a booting && dont-forget save configuration after open
 ___________________________________________
