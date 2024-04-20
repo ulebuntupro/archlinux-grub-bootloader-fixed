@@ -1,10 +1,15 @@
 --needed --noconfirm
 -------im just learn not teaching-------
 -
+
 !please dont make format if there other boot or try other think
+
 -internet with fixed networking
+
 --gparted on some volume 3gb/3000mb if dualboot and many other distros etc or 1000mb/1gb for single os
+
 ---format as fat32 from gparted tool or cli
+
 ----add flag fat32 as esp from gparted tool or cli
 
 
