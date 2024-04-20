@@ -2,6 +2,19 @@
 -------im just learn not teaching-------
 -
 
+---------------------------------------------
+git clone https://github.com/ulebuntupro/archlinux-grub-bootloader-fixed
+cd archlinux-grub-bootloader-fixed
+ls
+./tools
+---------------------------------------------
+
+
+!!!more info:
+-------------
+
+
+
 !please dont make format if there other boot or try other think
 
 -internet with fixed networking
