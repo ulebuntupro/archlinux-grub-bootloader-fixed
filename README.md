@@ -26,14 +26,22 @@ sudo chmod +x repair-bootloader-all
 
 ----------------------------------------
 sudo ./repair-bootloader-all
+
+
 sudo ./repair-bootloader-all-v2
+
+
 sudo ./repair-bootloader-kernel-arch
 
-or use another style
+
+or use another style lake zsh non bash
 
 sudo bash repair-bootloader-all
+
 sudo bash repair-bootloader-all-v2
+
 sudo bash repair-bootloader-kernel-arch
+
 
 or another more style
 
